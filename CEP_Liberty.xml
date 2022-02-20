@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 3/9/2012 4:03:32 PM -->
+<GameData>
+	<Policies>
+		<Update>
+			<Where Type="POLICY_LIBERTY" />
+			<Set CulturePerCity="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_MERITOCRACY" />
+			<Set GridX="1"
+				 GridY="1"
+				 NumCitiesPolicyCostDiscount="-33"
+				 HappinessPerTradeRoute="0"
+				 UnhappinessMod="0"
+				 PortraitIndex="9"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_CITIZENSHIP" />
+			<Set GridX="3"
+				 GridY="1"
+				 WorkerSpeedModifier="25"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_COLLECTIVE_RULE" />
+			<Set GridX="5"
+				 GridY="1"
+				 PortraitIndex="1"
+				 IconAtlas="CEP_POLICY_ATLAS"
+				 IconAtlasAchieved="CEP_POLICY_ATLAS_ACTIVE"
+				 SettlerProductionModifier="25"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_REPRESENTATION" />
+			<Set GridX="2"
+				 GridY="2"
+				 HappinessPerTradeRoute="100"
+				 GoldenAgeTurns="0"
+				 NumCitiesPolicyCostDiscount="0"
+				 UnhappinessMod="-5"
+				 PortraitIndex="29"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_REPUBLIC" />
+			<Set GridX="4"
+				 GridY="2"
+				 PortraitIndex="31"
+				 BuildingProductionModifier="0"
+				 />
+		</Update>
+		<Update>
+			<Where Type="POLICY_LIBERTY_FINISHER" />
+			<Set IncludesOneShotFreeUnits="1"
+				 NumFreeGreatPeople="1" />
+		</Update>
+	</Policies>
+	<Policy_CityYieldChanges>
+		<Row>
+			<PolicyType>POLICY_LIBERTY</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Update>
+			<Where PolicyType="POLICY_REPUBLIC" />
+			<Set PolicyType="POLICY_LIBERTY" />
+		</Update>
+	</Policy_CityYieldChanges>
+	<Policy_InstantYieldEra>
+		<Row>
+			<PolicyType>POLICY_MERITOCRACY</PolicyType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>200</Yield>
+		</Row>
+	</Policy_InstantYieldEra>
+	<Policy_FreeBuildingFlavor>
+		<Row>
+			<PolicyType>POLICY_REPUBLIC</PolicyType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<NumCities>-1</NumCities>
+		</Row>
+	</Policy_FreeBuildingFlavor>
+	<Policy_FreeUnitClasses>
+		<Delete PolicyType="POLICY_CITIZENSHIP" />
+		<Row>
+			<PolicyType>POLICY_CITIZENSHIP</PolicyType>
+			<UnitClassType>UNITCLASS_WORKER</UnitClassType>
+			<Count>1</Count>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_COLLECTIVE_RULE</PolicyType>
+			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+			<Count>1</Count>
+		</Row>
+	</Policy_FreeUnitClasses>
+	<!--<Buildings>
+		<Update>
+			<Where Type="BUILDING_PYRAMID" />
+			<Set PolicyBranchType="POLICY_MERITOCRACY" />
+		</Update>
+		<Update>
+			<Where Type="BUILDING_GREAT_WALL" />
+			<Set PolicyBranchType="POLICY_REPUBLIC" />
+		</Update>
+	</Buildings>-->
+</GameData>
